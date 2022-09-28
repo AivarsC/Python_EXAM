@@ -26,3 +26,35 @@ users = [
   { 'id': '8', 'name': 'Simon Peterson', 'age': 30 },
   { 'id': '9', 'name': 'Daniel Cane', 'age': 51 },
 ]
+
+
+# =================  Sprendimas  ==================
+
+# 1 funkcija
+
+def get_user_average_age(persons):
+  """ Grąžina visų vartotojų amžiaus vidurkį kaip skaičių, suapvalintą iki artimiausio sveikojo skaičiaus """
+
+  average = round((sum(item['age'] for item in persons))/len(persons))
+  return average
+ 
+# 2 funkcija
+  
+def get_users_names(people):
+  """Grąžins sąrašą su visų vartotojų vardais, išrikiuotais abėcėlės tvarka"""
+  return sorted([item['name'] for item in people])
+
+
+# ===================================
+# Testing:
+# ===================================
+
+print("# ------------Test 1 funkcija:------------")
+print('Vartotojų amžiaus vidurkis:')
+print(get_user_average_age(users))
+
+
+print("# ------------Test 2 funkcija:------------")
+print('Vartotojų vardai abėcėlės tvarka:')
+users_names = get_users_names(users)
+print(users_names)
