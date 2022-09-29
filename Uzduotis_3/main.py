@@ -11,3 +11,16 @@ audi = {
   "year": 2005,
   "color": 'white',
 }
+
+# =================  Sprendimas  ==================
+
+def get_dict_values(items):
+  """Grąžins sąrašą su visomis jo reikšmėmis (values)."""
+
+  return list(items.values())
+
+# ===================================
+# Testing:
+# ===================================
+
+print(get_dict_values(audi))
